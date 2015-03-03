@@ -28,14 +28,17 @@ public class AVGui {
 			case '3':
 				insertAddress();
 				break;
-			case '4':
+            case '4':
+                showSinglePersonByName();
+                break;
+			case '5':
 				deletePerson();
 				break;
 			case 'x':
 				break;
 			default:
 				System.out.println();
-				System.out.println("Ungültige Auswahl");
+				System.out.println("Ungï¿½ltige Auswahl");
 				System.out.println();
 			}
 		} while(selection != 'x');
@@ -68,12 +71,15 @@ public class AVGui {
 		}
 		System.out.println();
 	}
+    private void showSinglePersonByName() {
+        System.out.print("Nicht implementiert");
+    }
 	
 	private void deletePerson() {
 		long id = (long)StdInput.readInt("ID: ");
 		System.out.println();
 		if(bl.deletePerson(id)) {
-			System.out.println("Gelöscht");
+			System.out.println("Gelï¿½scht");
 		} else {
 			System.out.println("Nicht gefunden");
 		}
@@ -89,7 +95,6 @@ public class AVGui {
 		System.out.println(person.getPlz());
 		System.out.println(person.getOrt());
 	}
-	
 	private void showAll() {
 		List<Person> persons = bl.getAllPersons();
 		if(persons.size() == 0) {
@@ -111,7 +116,8 @@ public class AVGui {
 		System.out.println("1 - Alle Adressen anzeigen");
 		System.out.println("2 - Eine Adresse anzeigen");
 		System.out.println("3 - Neue Adresse");
-		System.out.println("4 - Adresse löschen");
+		System.out.println("4 - Name Suchen");
+		System.out.println("5 - Adresse lï¿½schen");
 		System.out.println("");
 		System.out.println("x - Programm beenden");
 		System.out.println("");

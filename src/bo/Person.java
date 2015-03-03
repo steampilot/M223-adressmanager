@@ -1,6 +1,6 @@
 package bo;
 
-public class Person {
+public class Person implements BusinessObject {
 	private long id;
 	private String name;
 	private String vorname;

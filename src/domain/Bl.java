@@ -3,11 +3,14 @@ package domain;
 import java.util.List;
 
 import bo.Person;
-import data.SimpleDal;
-
+import data.PersonDAO;
+import data.PersonDAOImpl;
 public class Bl {
-	private SimpleDal dal = new SimpleDal();
-	
+	private PersonDAO dal = new PersonDAOImpl();
+
+    public Person getByName(String name) {
+        return dal.getByName(name);
+    }
 	
 	public boolean deletePerson(long id) {
 		return dal.delete(id);
