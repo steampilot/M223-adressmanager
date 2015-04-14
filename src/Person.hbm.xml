@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="bo.Person" table="person">
+        <id name="id" column="id" type="int">
+          <generator class="identity"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="vorname" column="vorname" type="string"/>
+        <property name="strasse" column="strasse" type="string"/>
+        <property name="plz" column="plz" type="string"/>
+        <property name="ort" column="ort" type="string"/>
+        <property name="telnr" column="telnr" type="string"/>
+    </class>
+</hibernate-mapping>
